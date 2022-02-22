@@ -14,7 +14,7 @@ export default function FlashCard({
   }
 
   return (
-    <div className="shadow-lg p-4 w-64 h-32 flex flex-row items-center justify-center" onClick={handleCardClick}>
+    <div className="shadow-lg p-4 m-2 w-80 h-48 flex flex-row items-center justify-center cursor-pointer" onClick={handleCardClick}>
       <p className={`font-semibold ${fontSizeClassName}`}>{showTitle ? title : description}</p>
     </div>
   )
