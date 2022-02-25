@@ -1,11 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function FlashCard({
   title = 'Título do card',
-  description = 'Descrição do card'
+  description = 'Descrição do card',
+  showFlashCardTitle = true,
 }) {
 
-  const [showTitle, setshowTitle] = useState(true)
+  const [showTitle, setshowTitle] = useState(showFlashCardTitle)
+
+  useEffect(() => {
+    setshowTitle(showFlashCardTitle)
+  }, [showFlashCardTitle])
+  
   
   const fontSizeClassName = showTitle ? 'text-xl' : 'text-md'
 

@@ -55,7 +55,7 @@ export default function FlashCardsPage() {
           </div>
           <FlashCards>
             {allCards.map(({ id, title, description}) => {
-              return (<FlashCard key={id} title={title} description={description} />);
+              return (<FlashCard key={id} title={title} description={description} showFlashCardTitle={showTitle} />);
             })}
           </FlashCards>
         </GenericMain>
